@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="/wp-content/themes/sydney/css/custom/profile/dropdown.css">
+
+<div class="box">
+<p>Why do you want to volunteer?</p>
+<select>
+  <option value="1">Make a meaningful contribution to something </option>
+  <option value="2">Be a valuable part of society </option>
+  <option value="3">Help a specific group or individual </option>
+  <option value="4">Meet new people </option>
+  <option value="5">Socialise with others </option>
+  <option value="6">Be a part of a community </option>
+  <option value="7">Learn new things </option>
+</select>
+</div>
+
+<div class="box">
+<p>Skills, knowledge or passions you want to share?</p>
+<select>
+  <option value="1">Musical instruments </option>
+  <option value="2">Technical skills </option>
+  <option value="3">Interpersonal skills </option>
+  <option value="4">Knowledge domain </option>
+  <option value="5">Passion </option>
+</select>
+</div>
+
+<div class="box">
+<p>Anything specific you want to do?</p>
+<select>
+  <option value="1">Teaching </option>
+  <option value="2">Mentoring </option>
+  <option value="3">Environmental activities </option>
+  <option value="4">Helping people with disabilities </option>
+  <option value="5">Working in retail </option>
+</select>
+</div>
+
+<div class="box">
+<p>Mobility level?</p>
+<select>
+  <option value="1">Can run city to bay </option>
+  <option value="2">Can walk city to bay </option>
+  <option value="3">Can walk to the shops </option>
+  <option value="4">Can get myself a cup of tea </option>
+  <option value="5">Can perform non-mobile activities </option>
+</select>
+</div>
+
+<div class="box">
+<p>Any other relevant comments?</p>
+<select>
+  <option value="1">Can get myself a cup of tea </option>
+  <option value="2">Can perform non-mobile activities </option>
+</select>
+</div>
+
+<div class="box">
+<p>What suits you best?</p>
+<select>
+  <option value="1">Regular </option>
+  <option value="2">Casual </option>
+  <option value="3">Events </option>
+</select>
+</div>
+
+<script src="/wp-content/themes/sydney/js/dropdown/jquery.js"></script>
+<script src="/wp-content/themes/sydney/js/dropdown/jquery.nice-select.min.js"></script>
+<script src="/wp-content/themes/sydney/js/dropdown/fastclick.js"></script>
+<script src="/wp-content/themes/sydney/js/dropdown/prism.js"></script>
+<script>
+  $(document).ready(function() {
+    $('select:not(.ignore)').niceSelect();
+    FastClick.attach(document.body);
+
+  });
+</script>

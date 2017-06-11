@@ -1,0 +1,9 @@
+*** Kiwi Pro Changelog ***
+= 2.0.3 =
+* Saving settings would cause errors on some servers
+
+= 2.0.2 =
+* Ajax request failed on license activation
+
+= 2.0.1 =
+* Minor bugs
