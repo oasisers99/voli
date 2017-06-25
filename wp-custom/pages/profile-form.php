@@ -7,7 +7,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Voli Profile</title>
 </head>
 <style type="text/css">
     label[class*=question]{
@@ -18,37 +18,41 @@
     $(document).ready(function(){
 
         $("#btnProfileSubmit").click(function(){
-
+        //$( "form" ).submit(function( event ) {
             // 1. Remove feedbacks
             removeFeedbacks();
 
-            validateValues();
-            return;
+            //validateValues();
 
             // 2. Validate input values
-            if(validateValues()){
+            if(validateValues() == false) return false;
 
-                var data = {
-                  action: "this is test string."
-                };
+            $("#profileForm").submit();
 
-                var json = JSON.stringify(data);
-                    $.ajax({
-                        type: "post",
-                        url: "../controller/profile-form-submit.php",
-                        data: {action: "action value"},
-                        success: function(data, status){
-                           alert(data);
-                        },
-                        error: function(xhr, desc, err) {
-                            console.log(xhr);
-                            console.log("Details: " + desc + "\nError:" + err);
-                        }
-                    });
-                }
+            //if(validateValues()){
 
 
-            });
+                /*
+                var data = makeSelectedValuesAsJson();
+
+                //var json = JSON.stringify(data);
+                $.ajax({
+                    type: "post",
+                    url: "../controller/profile-form-submit.php",
+                    data: {action: "action value"},
+                    success: function(data, status){
+                       alert(data);
+                    },
+                    error: function(xhr, desc, err) {
+                        console.log(xhr);
+                        console.log("Details: " + desc + "\nError:" + err);
+                    }
+                });
+                */
+            //}
+
+            //event.preventDefault();
+        });     
 
 
         //toggle other input box display - q1
@@ -63,6 +67,15 @@
         });
 
 
+        $("#q2_a6").change(function(){
+
+            if(this.checked){
+                $("#q2_other").attr("hidden", false);
+            }else{
+                $("#q2_other").val('');
+                $("#q2_other").attr("hidden", true);
+            }
+        });
 
         /**
          * Validate all the input values.
@@ -102,10 +115,8 @@
             //check the q1
             var q1Other = $("#q1_other").val();
             $("input[id*=q1_a]").each(function(){
-                console.log($(this).attr('id'));
                 if($(this).attr('id') == 'q1_a7'){
                     if($(this).is(':checked') && !isEmpty(q1Other)){
-                        console.log(q1Other);
                         count++;
                     }
                 }else{
@@ -114,7 +125,7 @@
                     }
                 }
             });
-            console.log(count);
+
             //if not selected, display warning message at q1
             if(count == 0){
                 var htmlMSG = '<div class="form-control-feedback" id="feedback-name" style="color:red;">Please select at least one answer.</div>';
@@ -129,7 +140,6 @@
 
                 if($(this).attr('id') == 'q2_a6'){
                     if($(this).is(':checked') && !isEmpty(q2Other)){
-
                         count++;
                     }
                 }else{
@@ -197,12 +207,8 @@
 
 </script>
 <body>
-
-<?php
-?>
 <div class="container">
-<!--    <form action="../controller/profile-form-submit.php" method="post">-->
-
+<form action="../controller/profile-form-submit.php" id="profileForm" method="post">
         <div class="form-group" id="name-div">
             <label class="question" for="name">What is your name?</label>
             <input type="text" class="form-control col-sm-5" id="voli_name" name="voli_name" placeholder="Enter your name"/>
@@ -297,20 +303,20 @@
                     Other
                 </label>
                 <div class="col-sm-5">
-                    <input class="form-control" type="text" id="q2_other" name="q2_a[]" value="" style="width:300px;">
+                    <input class="form-control" type="text" id="q2_other" name="q2_a[]" style="width:300px;" hidden="true">
                 </div>
             </div>
         </div>
         <div class="form-group" id="q3-div">
             <label class="question" for="textarea">Please describe your idea and a bit about yourself.</label>
-            <textarea class="form-control" id="q3_text" style="width:800px; height: 100px;"></textarea>
+            <textarea class="form-control" id="q3_text" name="q3_text" style="width:800px; height: 100px;"></textarea>
         </div>
         <div class="form-group" id="q4-id">
             <label class="question" for="textarea">Any other comments you want to send us?</label>
-            <textarea class="form-control" id="q4_text" style="width:800px; height: 100px;"></textarea>
+            <textarea class="form-control" id="q4_text" name="q4_text" style="width:800px; height: 100px;"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary" id="btnProfileSubmit">Submit</button>
+        <button class="btn btn-primary" id="btnProfileSubmit">Submit</button>
     </div>
-<!--</form>-->
+</form>
 </body>
 </html>
