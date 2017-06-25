@@ -3,7 +3,7 @@
 Plugin Name: Post Grid
 Plugin URI: http://pickplugins.com
 Description: Awesome post grid for query post from any post type and display on grid.
-Version: 2.0.18
+Version: 2.0.20
 Author: pickplugins
 Author URI: http://pickplugins.com
 Text Domain: post-grid
@@ -28,10 +28,10 @@ class PostGrid{
 		define('post_grid_conatct_url', 'http://pickplugins.com/contact/' );
 		define('post_grid_qa_url', 'http://www.pickplugins.com/questions/' );
 		define('post_grid_plugin_name', 'Post Grid' );
-		define('post_grid_version', '2.0.18' );
+		define('post_grid_version', '2.0.20' );
 		define('post_grid_customer_type', 'free' );		
 		define('post_grid_share_url', 'https://wordpress.org/plugins/post-grid/' );
-		define('post_grid_textdomain', 'post_grid' );	
+		define('post_grid_textdomain', 'post-grid' );
 
 		
 		//include( ABSPATH.'wp-admin/includes/template.php' );		
@@ -55,7 +55,7 @@ class PostGrid{
 		}
 		
 	public function post_grid_load_textdomain() {
-	  load_plugin_textdomain( 'post_grid', false, plugin_basename( dirname( __FILE__ ) ) . '/languages/' ); 
+	  load_plugin_textdomain( post_grid_textdomain, false, plugin_basename( dirname( __FILE__ ) ) . '/languages/' );
 	}
 		
 	public function post_grid_install(){

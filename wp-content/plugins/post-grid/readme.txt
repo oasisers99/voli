@@ -3,27 +3,35 @@
 	Donate link: http://pickplugins.com
 	Tags: post grid, grid, custom post grid, post type grid, grid display, category filter, custom post, filter, filtering, grid, layout, list, masonry, post, post filter, post layout, taxonomy, taxonomy filter, 
 	Requires at least: 3.8
-	Tested up to: 4.7
-	Stable tag: 2.0.18
+	Tested up to: 4.8
+	Stable tag: 2.0.20
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 	Awesome post grid for query post from any post type and display on grid.
 
 == Description ==
-Query post from your custom post types and create awesome grid.
-
-Use any where by short-codes and easy customize via short-code generator page, you can display or hide grid meta items like post authors, post date, post categories, post tags and etc.
+Create post grid form any custom post type, You will be thrilled to see how its works, easy to setup, almost no coding required. display grid anywhere via shortcode. lots more filter hook will give you extend as your needs.
 
 
-### Post Grid by http://pickplugins.com
+### Post Grid by  [http://pickplugins.com](http://pickplugins.com)
 
-* [See the Live demo!&raquo;](http://www.pickplugins.com/demo/post-grid/)
-* [Buy Premium! &raquo;](http://www.pickplugins.com/item/post-grid-crete-awesome-grid-from-any-post-type-for-wordpress/)
+* [See the Live demo](http://www.pickplugins.com/demo/post-grid/?ref=wordpress.org)
+* [Buy Premium](https://www.pickplugins.com/item/post-grid-create-awesome-grid-from-any-post-type-for-wordpress/?ref=wordpress.org)
+* [Documentation](http://pickplugins.com/docs/documentation/post-grid/?ref=wordpress.org)
 
 
+<strong>Any Custom Post</strong>
+Post grid is master of displaying grid from any custom post types. you will never ever worried about.
 
-<strong>Plugin Features</strong><br />
+<strong>Taxonomy & Terms Support</strong>
+Query post by custom taxonomy and terms is the most wanted feature already in post grid, you can select multiple taxonomy and terms for query post.
+
+<strong>Variety of media display</strong>
+you can display YouTube, vimeo, dailymotion, soundcloud, mp3, gallery, Font Awesome icons on thumbnail area. linked to custom link on thumbnail image. 
+
+
+<strong>Plugin Features</strong>
 
 * Fully responsive and mobile ready.
 * Unlimited grid anywhere.
@@ -58,13 +66,13 @@ Use any where by short-codes and easy customize via short-code generator page, y
 
 <strong>Video Tutorial(with premium version interface)</strong>
 
-* [How to install activate & license!&raquo;](https://youtu.be/gzH0uO6IReE)
-* [How to create Post Grid!&raquo;](https://youtu.be/6HwLUBqT7i4)
-* [Post Grid â€“ Query Post!&raquo;](https://youtu.be/FKIcey0ujgo)
-* [Post Grid â€“ Grid Layout!&raquo;](https://youtu.be/g2GSb4chGXQ)
-* [Post Grid â€“ Navigation!&raquo;](https://youtu.be/B12CglBCLJY)
-* [Post Grid â€“ Layout Editor!&raquo;](https://youtu.be/z_tygQ12aJk)
-* [Post Grid â€“ Settings!&raquo;](https://youtu.be/JsPKfENJL8I)
+* [How to install activate & license](https://youtu.be/gzH0uO6IReE)
+* [How to create Post Grid](https://youtu.be/6HwLUBqT7i4)
+* [Post Grid - Query Post](https://youtu.be/FKIcey0ujgo)
+* [Post Grid - Grid Layout](https://youtu.be/g2GSb4chGXQ)
+* [Post Grid - Navigation](https://youtu.be/B12CglBCLJY)
+* [Post Grid - Layout Editor](https://youtu.be/z_tygQ12aJk)
+* [Post Grid - Settings](https://youtu.be/JsPKfENJL8I)
 
 
 == Installation ==
@@ -96,6 +104,13 @@ then paste this shortcode anywhere in your page to display grid<br />
 == Changelog ==
 
 
+
+
+	= 2.0.20 =
+    * 13/01/2017 fix - translation issue fixed.
+
+	= 2.0.19 =
+    * 11/01/2017 add - added Bulgarian translation.
 
 	= 2.0.18 =
     * 11/01/2017 fix - excerpt display issue.
